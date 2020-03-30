@@ -6,6 +6,7 @@ import FollowButtonContainer from './FollowButtonContainer'
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import { layoutConstants } from '../../constants/layout.constants'
+import icon from '../../static/defaultIcon.png'
 
 const styles = theme => ({
     root:{
@@ -83,7 +84,7 @@ class UserInfoContainer extends React.Component{
                     borderColor="grey.500">
                     <Box className={classes.box_image}
                             borderRight={1}>
-                            <span>画像</span>
+                            <img src={icon} width={"40"} />
                             
                     </Box>
 

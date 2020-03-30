@@ -4,6 +4,7 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
 import { layoutConstants } from '../../constants/layout.constants'
+import icon from '../../static/defaultIcon.png'
 
 const styles = theme => ({
     root:{
@@ -49,7 +50,8 @@ class ViewPost extends React.Component{
                 borderColor="grey.500">
                 <Box className={classes.box_image}
                         borderRight={1}>
-                        <span  className={classes.post}>画像</span>
+                        <img className={classes.post} 
+                            src={icon} width={"40"} />
                 </Box>
                 <div className={classes.tweet_data}>
                     <div className={classes.user_info}>

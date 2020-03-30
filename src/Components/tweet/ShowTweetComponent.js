@@ -32,11 +32,10 @@ class ShowTweetComponents extends React.Component{
         const {me,classes, tweet} = this.props
 
         let PostsCon
-        console.log(tweet);
         if (tweet.loading == false){
             PostsCon = <TweetInfo postdata={ tweet.postdata[0] } removeTweet={this.props.removeTweet} me={me} />
         }
-
+        
         return(
             <div className={classes.root}>
                 <CssBaseline />
