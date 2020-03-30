@@ -3,52 +3,34 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
+import { layoutConstants } from '../../constants/layout.constants'
 
 const styles = theme => ({
     root:{
-        //position: 'relative',
-        width: '100%',
-        //marginRight: 'auto',
-        //marginLeft : 'auto',
         display: 'flex',
-        //flexDirection: 'row',
-        flexwrap: 'nowrap',
     },
     box_image:{
-        //position: 'relative',
-        width: '5%',
+        width: layoutConstants.ICON_SIZE_WIDTH + 'px'
 
     },
     box_id:{
-        //position: 'relative',
-        //width: '45%',
         minheight: '20px',
     },
     box_created:{
-        //width: '45%',
         minheight: '20px',
     },
     box_post:{
-        width: 'auto',
-        //width: '500px',
-        //minheight: '20px',
-        //position: 'relative',
         whiteSpace: 'normal',
-        wordWrap: 'break-word',
     },
     tweet_data: {
-        width: '95%',
+        width: `calc(100% - ${layoutConstants.ICON_SIZE_WIDTH}px)`,
         flex: '1',
     },
     user_info:{
-        width: '95%',
-        //position: 'relative',
+        width: `calc(100% - ${layoutConstants.ICON_SIZE_WIDTH}px)`,
         display: 'flex',
-        //flexDirection: 'row',
-        flexwrap: 'nowrap',
     },
     typography: {
-        //position: 'relative',
         textAlign: 'left',
     }
 

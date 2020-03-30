@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import FollowButtonContainer from './FollowButtonContainer'
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
+import { layoutConstants } from '../../constants/layout.constants'
 
 const styles = theme => ({
     root:{
@@ -22,7 +23,7 @@ const styles = theme => ({
     },
     box_image:{
         position: 'relative',
-        width: '20%',
+        width: '100pt',
     },
     box_follow:{
         position: 'relative',

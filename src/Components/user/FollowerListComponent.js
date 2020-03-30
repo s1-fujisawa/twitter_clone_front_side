@@ -53,7 +53,7 @@ class FollowerList extends React.Component{
         return(
             <div className={classes.root}>
             <CssBaseline />
-            <Header menu="ホーム"/>
+            <Header menu="フォロワー" me={me}/>
             <SideBar me={me} />
             <main className={classes.main_content}>
                 <div className={classes.toolbar} />

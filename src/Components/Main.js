@@ -54,7 +54,7 @@ class Main extends React.Component{
         return(
             <div className={classes.root}>
                 <CssBaseline />
-                <Header menu="ホーム"/>
+                <Header me={me} menu="ホーム"/>
                 <SideBar logOut={this.props.logOut} me={this.props.me}/>
                 <main className={classes.main_content}>
                     <div className={classes.toolbar} />

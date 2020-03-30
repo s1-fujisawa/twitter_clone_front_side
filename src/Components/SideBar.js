@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import {layoutConstants} from '../constants/layout.constants';
 import {　logoutAndRedirect } from "../Actions/auth.actions"
+import SideMenuContainer from "./SideMenuContainer"
 
 const styles = theme => ({
 
@@ -21,7 +22,6 @@ const styles = theme => ({
             flexShrink: 0,
         },
     },
-    toolbar: theme.mixins.toolbar,
     drawerPaper: {
         width: layoutConstants.DRAWER_WIDTH,
     },
@@ -51,34 +51,7 @@ class SideBar extends React.Component{
 
     render(){
         const { classes, theme, me } = this.props;
-        const drawer = (
-            <div>
-                <div className={classes.toolbar} />
-                <Divider />
-                <List>
-                    <Link to={"/main"}>
-                        <ListItem button>
-                            <ListItemText primary="ホーム" />
-                        </ListItem>
-                    </Link>
-                </List>
-                <List>
-                    <Link to={"/user/" + me.me.user.id}>
-                        <ListItem button>
-                            <ListItemText primary="プロフィール" />
-                        </ListItem>
-                    </Link>
-                </List>
-                <List>
-                    <Link onClick={this.logOut}>
-                        <ListItem button>
-                            <ListItemText primary="ログアウト" />
-                        </ListItem>
-                    </Link>
-                </List>
-            </div>
-        )
-
+        
         return(
             <nav className={classes.drawer}>
                 <Hidden smUp  implementation="css">
@@ -92,7 +65,7 @@ class SideBar extends React.Component{
                             paper: classes.drawerPaper,
                         }}
                         >
-                        {drawer}
+                        <SideMenuContainer me={me}/>
                     </Drawer>
                 </Hidden>
                 <Hidden xsDown implementation="css">
@@ -103,7 +76,7 @@ class SideBar extends React.Component{
                     variant="permanent"
                     open
                     >
-                    {drawer}
+                    <SideMenuContainer me={me}/>
                     </Drawer>
                 </Hidden>
             </nav>
